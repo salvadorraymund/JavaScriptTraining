@@ -272,4 +272,44 @@ var per = perimeter(width, length);
 
 console.log("The perimeter is: ", per);
 
+function log(nameOfScientist){
+	console.log(nameOfScientist);
+}
+
+var scientist = "Ken Thompson";
+var log1 = log(scientist);
+
+function shout(word){
+	let salita = word;
+	var result = salita + salita;
+	console.log(result);
+	return result;
+};
+
+
+function double(name) {
+  return name + ' and ' + name;
+}
+
+let r = double('Roy');
+console.log(r);
+
+function heart(string){
+	var charnumber = string.length;
+	console.log(charnumber); 
+	return charnumber;
+};
+
+var s = heart("spinach");
+console.log(s);
+
+function toCase(string){
+	var town = string.toLowerCase();
+	var output = string.toUpperCase();
+	return(town + "-" + output);
+};
+
+var shut = toCase("shut");
+console.log(shut);
+
 
