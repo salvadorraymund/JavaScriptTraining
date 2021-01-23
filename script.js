@@ -1,5 +1,4 @@
-var date = new Date();
-	document.body.innerHTML = "<h1>Today is " +date+ "</h1>"
+const person = {};
 
 var a = 4;
 var b = "ducks";
@@ -311,5 +310,25 @@ function toCase(string){
 
 var shut = toCase("shut");
 console.log(shut);
+
+function shortcut(string1, string2){
+ let s1 = string1.charAt(0);
+ let s2 = string2.charAt(0);
+ return s1 + s2;
+}
+
+var sc = shortcut("Amnesty", "Industry");
+console.log(sc);
+
+function firstChar(character){
+        var char = character.trim();
+        var x = char.charAt(0);
+        return x;
+}
+
+var charing  = firstChar(" Mela");
+console.log(charing);
+
+
 
 
