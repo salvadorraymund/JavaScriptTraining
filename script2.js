@@ -147,7 +147,21 @@ class Shape1{
 //OOJS3
 // class Square5 extends Shape1{
 // 	constructor
-// }
+// 
+class Square10 extends Shape1{
+	constructor(name, sides, sideLength){
+		super(name);
+		this.name = name;
+		this.sides = sides;
+		this.sideLength = sideLength;
+	}
+	calcArea(){
+		return this.sideLength*this.sideLength;
+	}
+}
+
+let mySquare = new Square10("square", 4, 5);
+
 
 
 	
