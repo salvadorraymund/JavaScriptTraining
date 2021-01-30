@@ -10,13 +10,23 @@ const cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
 let info = "My cats are called ";
 const para = document.querySelector('p');
 
-for (let i = 0; i < cats.length; i++){
-	if (i <= 3){
-		info += cats[i] + ", ";
+// for (let i = 0; i < cats.length; i++){
+// 	if (i <= 3){
+// 		info += cats[i] + ", ";
+// 	} else {
+// 		info += cats[i] + ". ";
+// 	}
+// }
+
+let i = 0;
+do {
+	if (i === cats.length - 1) {
+		info += "and " +cats[i] + ".";
 	} else {
-		info += cats[i] + ". ";
+		info += cats[i] + ", ";
 	}
-}
+	i++;
+} while (i < cats.length);
 
 para.textContent = info;
 
@@ -64,16 +74,57 @@ btn1.addEventListener('click', function(){
 // 	final expression
 // }
 
-let i = 0;
-while (i < cats.length){
-	if (i === cats.length - 1) {
-		info += "and " + cats[i] + ".";
-	} else {
-		info += cats[i] + ", ";
-	}
-	i++;
-}
+// let i = 0;
+// while (i < cats.length){
+// 	if (i === cats.length - 1) {
+// 		info += "and " + cats[i] + ".";
+// 	} else {
+// 		info += cats[i] + ", ";
+// 	}
+// 	i++;
+// }
 
-para.textContent = info;
+// para.textContent = info;
 
-//Do-While Loop
+//Do-While Loop - conditions comes after anything else. the code inside the curly braces is always run once before the check
+// initializer
+// do{
+// 	code to run
+// 	final expression
+// } while(condition)
+
+//ActiveLearning1
+
+const output = document.querySelector(".output");
+const btn10 = document.getElementById("launchButton");
+output.innerHTML = "";
+
+btn10.addEventListener("click", function(){
+	let i = 10;
+	do {
+        let para = document.createElement('p');
+		if (i === 10){
+		para.textContent = "Countdown " + i;
+	 	} else if (i === 0){
+	 		para.textContent = "Blast off!!";
+	 	} else {
+	 		para.textContent = i;
+	 	}
+		output.appendChild(para);
+		i--;
+	 } while(i >= 0);
+	// for(let i = 10; i >=  0; i--) {
+	// 	if (i === 10){
+	// 		let para = document.createElement('p');
+	// 		para.textContent = "Countdown " + i;
+	// 		output.appendChild(para);
+	// 	} else if (i === 0){
+	// 		para.textContent = "Blast off!!";
+	// 		output.appendChild(para);
+	// 	} else {
+	// 		para.textContent = i;
+	// 		output.appendChild(para);
+	// 	}
+		
+	// }
+});
