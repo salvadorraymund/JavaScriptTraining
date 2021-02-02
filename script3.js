@@ -128,3 +128,27 @@ btn10.addEventListener("click", function(){
 		
 	// }
 });
+
+//ActiveLearning2
+
+const guests = ["Chris", "Anne", "Colin", "Terri", "Phil", "Lola", "Sam", "Kay", "Bruce"];
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
+
+let o = 0;
+while(o < guests.length){
+	if (o === 4) {
+		refused.textContent += guests[4] + " and ";
+	} else if (o === 5) {
+		refused.textContent += guests[5] + " ";
+	}	else {
+		if (o === 8){
+			admitted.textContent += guests[o] + " ";
+	} else {
+		admitted.textContent += guests[o] + ", ";
+	}
+}
+	o++;
+};
