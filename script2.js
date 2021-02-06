@@ -79,6 +79,10 @@ let person3 = new Object({
 let person1 = new Person("Raymund", "Salvador", 32, "male", ["running", "biking", "working out", "cooking"]);
 let person2 = new Person("Mela", "Babee", 31, "female", ["eating", "sleeping"]);
 
+Person.prototype.farewell = function(){
+	alert(this.name.first + " has left the building. Bye for now!");
+};
+
 //OOJS Exercise 1
 function Shape (name, sides, sideLength) {
 	this.name = name;
@@ -148,19 +152,25 @@ class Shape1{
 // class Square5 extends Shape1{
 // 	constructor
 // 
-class Square10 extends Shape1{
-	constructor(name, sides, sideLength){
-		super(name);
-		this.name = name;
-		this.sides = sides;
-		this.sideLength = sideLength;
-	}
-	calcArea(){
-		return this.sideLength*this.sideLength;
-	}
+// class Square10 extends Shape1{
+// 	constructor(name, sides, sideLength){
+// 		super(name);
+// 		this.name = name;
+// 		this.sides = sides;
+// 		this.sideLength = sideLength;
+// 	}
+// 	calcArea(){
+// 		return this.sideLength*this.sideLength;
+// 	}
+// }
+
+// let mySquare = new Square10("square", 4, 5);
+
+let Square10 = new Shape1("square", 4, 5);
+Shape1.prototype.calcArea = function(){
+	return this.sideLength*this.sideLength;
 }
 
-let mySquare = new Square10("square", 4, 5);
 
 
 
